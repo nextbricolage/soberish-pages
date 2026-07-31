@@ -21,14 +21,19 @@
     a { color: #9ec5ff; }
   }
   h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
-  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid rgba(128,128,128,.3); padding-bottom: .3rem; }
   address { font-style: normal; }
+  .langnav { font-size: .9rem; margin: 1rem 0 2rem; }
   .note { color: #888; font-size: .9rem; margin-top: 2.5rem; }
   footer { margin-top: 3rem; font-size: .85rem; color: #888; }
 </style>
 </head>
 <body>
 
+<p class="langnav"><a href="#de">Deutsch</a> · <a href="#en">English</a></p>
+
+<!-- ─────────────────────────  DEUTSCH  ───────────────────────── -->
+<section id="de" lang="de">
 <h1>Impressum</h1>
 
 <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</p>
@@ -42,10 +47,27 @@ Deutschland
 
 <h2>Kontakt</h2>
 <p>E-Mail: <a href="mailto:soberish-app@proton.me">soberish-app@proton.me</a></p>
+</section>
 
-<p class="note" lang="en"><strong>English:</strong> This is the legal notice
-(&ldquo;Impressum&rdquo;) required under German law (§ 5 DDG) for the Soberish
-app. Operator and contact are listed above.</p>
+<!-- ─────────────────────────  ENGLISH  ───────────────────────── -->
+<section id="en" lang="en">
+<h1>Legal notice</h1>
+
+<p>Information pursuant to § 5 DDG (German Digital Services Act):</p>
+
+<address>
+Martin Betz<br>
+Johannisstr. 13<br>
+90419 Nürnberg<br>
+Germany
+</address>
+
+<h2>Contact</h2>
+<p>E-mail: <a href="mailto:soberish-app@proton.me">soberish-app@proton.me</a></p>
+
+<p class="note">This English text is a translation for convenience. The German
+version above is the legally binding one.</p>
+</section>
 
 <footer>
   <p>Soberish · <a href="privacy.html">Datenschutzerklärung / Privacy Policy</a></p>
