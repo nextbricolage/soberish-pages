@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soberish herunterladen / Download / Télécharger</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 3rem 1.25rem;
+    color: #222;
+    background: #fbf8f2;
+    text-align: center;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #14130f; }
+    a.btn { background: #1f3a28; color: #eafff0; border-color: #2f5d3a; }
+  }
+  img.icon { width: 96px; height: 96px; border-radius: 22px; }
+  h1 { font-size: 1.5rem; margin: 1rem 0 .25rem; }
+  p.tag { color: #4c7a59; margin-top: 0; font-weight: 600; }
+  .btns { margin: 2rem 0 1rem; display: flex; flex-direction: column; gap: .75rem; }
+  a.btn {
+    display: inline-block; padding: .85rem 1.25rem; border-radius: 999px;
+    background: #2f5d3a; color: #fff; text-decoration: none; font-weight: 600;
+    border: 1px solid #2f5d3a;
+  }
+  a.btn.secondary { background: transparent; color: #2f5d3a; }
+  .legal { margin-top: 2.5rem; font-size: .85rem; }
+  .legal a { color: inherit; }
+</style>
+</head>
+<body>
+<img class="icon" src="icon-512x512.png" alt="Soberish">
+<h1>Soberish</h1>
+<p class="tag">Less, not never.</p>
+
+<div class="btns">
+  <a class="btn" id="appstore" href="https://apps.apple.com/app/id6813807042">Im App Store laden</a>
+  <a class="btn secondary" id="play" href="https://play.google.com/store/apps/details?id=com.nextbricolage.soberish">Bei Google Play</a>
+</div>
+
+<p class="legal">
+  <a href="privacy.html">Datenschutz</a> ·
+  <a href="terms.html">Nutzungsbedingungen</a> ·
+  <a href="impressum.html">Impressum</a>
+</p>
+
+<script>
+  // Auf Mobilgeräten direkt zum passenden Store weiterleiten.
+  (function () {
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPhone|iPad|iPod/i.test(ua);
+    var isAndroid = /Android/i.test(ua);
+    if (isIOS) {
+      window.location.replace(document.getElementById("appstore").href);
+    } else if (isAndroid) {
+      window.location.replace(document.getElementById("play").href);
+    }
+    // Desktop: beide Buttons anzeigen, keine Weiterleitung.
+  })();
+</script>
+</body>
+</html>
